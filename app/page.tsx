@@ -6,6 +6,7 @@ import QualityGallery from "@/components/QualityGallery";
 import Featured from "@/components/Featured";
 import Inventory from "@/components/Inventory";
 import Warranty from "@/components/Warranty";
+import Reviews from "@/components/Reviews";
 import TradeInBanner from "@/components/TradeInBanner";
 import Footer from "@/components/Footer";
 import HomeClient from "@/components/HomeClient";
@@ -19,6 +20,7 @@ export default function Home() {
       <Featured />
       <Inventory />
       <Warranty />
+      <Reviews />
       <TradeInBanner />
       <Footer />
     </HomeClient>
