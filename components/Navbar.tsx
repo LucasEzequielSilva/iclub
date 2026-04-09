@@ -7,13 +7,13 @@ import ResellerModal from "./ResellerModal";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-black">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 bg-white">
       <BlueDollarTicker />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
         <a href="/" className="flex items-center">
           <Image
-            src="/logo.jpg"
-            alt="Trendspot"
+            src="/logo iclub.png"
+            alt="iCLUB Store"
             width={180}
             height={50}
             className="h-10 w-auto"
@@ -24,25 +24,25 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <a
             href="/#inventory"
-            className="text-sm font-medium hover:text-white transition-colors"
+            className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
           >
             Stock
           </a>
           <a
             href="/#featured"
-            className="text-sm font-medium hover:text-white transition-colors"
+            className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
           >
             Destacados
           </a>
           <a
             href="/#warranty"
-            className="text-sm font-medium hover:text-white transition-colors"
+            className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
           >
             Garantía
           </a>
           <a
             href="/cotizador"
-            className="text-sm font-medium hover:text-white transition-colors"
+            className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
           >
             Plan Canje
           </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
           href="https://wa.me/5491127967222"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:flex items-center gap-2 bg-green-500 text-white px-5 py-2.5 min-h-[44px] rounded-full text-sm font-medium hover:bg-green-600 transition-colors"
+          className="hidden md:flex items-center gap-2 bg-[#c462ab] text-white px-5 py-2.5 min-h-[44px] rounded-full text-sm font-medium hover:bg-[#b0559a] transition-colors"
         >
           <FaWhatsapp aria-hidden="true" className="size-4" />
           Contacto

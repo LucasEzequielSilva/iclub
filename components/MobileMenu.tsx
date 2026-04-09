@@ -19,7 +19,7 @@ export default function MobileMenu() {
     <div className="md:hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="cursor-pointer text-white p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
+        className="cursor-pointer text-slate-900 p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
         aria-label={open ? "Cerrar menú" : "Abrir menú"}
       >
         {open ? (
@@ -30,25 +30,25 @@ export default function MobileMenu() {
       </button>
 
       {open && (
-        <div className="fixed inset-0 top-20 z-40 bg-black">
+        <div className="fixed inset-0 top-20 z-40 bg-white">
           <nav className="flex flex-col items-center gap-8 pt-16 px-6">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-2xl font-medium text-slate-300 hover:text-white transition-colors py-2 min-h-[44px] flex items-center"
+                className="text-2xl font-medium text-slate-600 hover:text-slate-900 transition-colors py-2 min-h-[44px] flex items-center"
               >
                 {link.label}
               </a>
             ))}
-            <ResellerModal className="text-2xl font-medium text-slate-300 hover:text-white transition-colors py-2 min-h-[44px] flex items-center cursor-pointer" />
+            <ResellerModal className="text-2xl font-medium text-slate-600 hover:text-slate-900 transition-colors py-2 min-h-[44px] flex items-center cursor-pointer" />
             <a
               href="https://wa.me/5491127967222"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-4 flex items-center gap-2 bg-green-500 text-white px-8 py-3 min-h-[44px] rounded-full text-lg font-medium hover:bg-green-600 transition-colors"
+              className="mt-4 flex items-center gap-2 bg-[#c462ab] text-white px-8 py-3 min-h-[44px] rounded-full text-lg font-medium hover:bg-[#b0559a] transition-colors"
             >
               <FaWhatsapp aria-hidden="true" className="size-5" />
               Contacto

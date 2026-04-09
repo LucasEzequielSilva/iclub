@@ -14,13 +14,13 @@ function PhoneSilhouette({ colorHex }: { colorHex: string }) {
   return (
     <div className="relative w-36 h-72 sm:w-48 sm:h-96 md:w-56 md:h-[420px] mx-auto">
       <div
-        className="absolute inset-0 rounded-[3rem] border-2 border-white/10"
+        className="absolute inset-0 rounded-[3rem] border-2 border-slate-200"
         style={{
           background: `linear-gradient(145deg, ${colorHex}22 0%, ${colorHex}08 50%, ${colorHex}15 100%)`,
           boxShadow: `0 0 80px ${colorHex}20, inset 0 0 40px ${colorHex}08`,
         }}
       >
-        <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-7 rounded-full bg-black/80 border border-white/5" />
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-7 rounded-full bg-slate-900 border border-slate-300" />
         <div className="absolute inset-3 top-14 bottom-4 rounded-[2.2rem] overflow-hidden">
           <div
             className="absolute inset-0"
@@ -59,8 +59,8 @@ function ImageLoader() {
   return (
     <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
       <div className="relative size-12">
-        <div className="absolute inset-0 rounded-full border-2 border-white/10" />
-        <div className="absolute inset-0 rounded-full border-2 border-t-white/60 animate-spin" />
+        <div className="absolute inset-0 rounded-full border-2 border-slate-200" />
+        <div className="absolute inset-0 rounded-full border-2 border-t-slate-500 animate-spin" />
       </div>
       <p className="text-xs text-slate-500 animate-pulse">Cargando imagen...</p>
     </div>
@@ -143,7 +143,7 @@ export default function ProductGallery({ product, specs }: Props) {
                 <p className="text-[10px] sm:text-xs text-slate-500 uppercase truncate">
                   {item.label}
                 </p>
-                <p className="text-xs sm:text-sm text-white mt-1 font-medium break-words leading-snug">
+                <p className="text-xs sm:text-sm text-slate-900 mt-1 font-medium break-words leading-snug">
                   {item.value}
                 </p>
               </div>
@@ -153,7 +153,7 @@ export default function ProductGallery({ product, specs }: Props) {
 
         {activeTab === "display" && specs && (
           <div className="text-center space-y-3 p-6 sm:p-8">
-            <p className="text-4xl sm:text-5xl font-light text-white">{specs.displaySize}</p>
+            <p className="text-4xl sm:text-5xl font-light text-slate-900">{specs.displaySize}</p>
             <p className="text-base sm:text-lg text-slate-400">{specs.displayType}</p>
             <p className="text-xs sm:text-sm text-slate-500">
               {specs.resolution} &middot; {specs.refreshRate}
@@ -163,7 +163,7 @@ export default function ProductGallery({ product, specs }: Props) {
 
         {/* Capacity badge overlay */}
         <div className="absolute top-4 right-4">
-          <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-white/10 text-white/70 backdrop-blur-sm">
+          <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 backdrop-blur-sm">
             {product.capacity}
           </span>
         </div>
@@ -179,8 +179,8 @@ export default function ProductGallery({ product, specs }: Props) {
               onClick={() => setActiveTab(tab.id)}
               className={`cursor-pointer flex-1 glass-panel rounded-xl min-h-[44px] py-2.5 px-2 sm:p-3 flex flex-col items-center justify-center gap-1 sm:gap-1.5 transition-[border-color,background-color] ${
                 activeTab === tab.id
-                  ? "border-white/20 bg-white/5"
-                  : "hover:bg-white/3"
+                  ? "border-slate-300 bg-slate-50"
+                  : "hover:bg-slate-50"
               }`}
             >
               <Icon aria-hidden="true" className="size-5 text-slate-400" />

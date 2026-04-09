@@ -4,16 +4,16 @@ import type { Product } from "@/data/products";
 const warrantyByCondition: Record<Product["condition"], string[]> = {
   Sellado: [
     "Garantía oficial Apple",
-    "30 días de garantía TrendSpot adicional",
+    "30 días de garantía iCLUB Store adicional",
     "Soporte post-venta incluido",
   ],
   "A+": [
-    "30 días de garantía TrendSpot",
+    "30 días de garantía iCLUB Store",
     "Cubre defectos de funcionamiento",
     "Soporte post-venta incluido",
   ],
   A: [
-    "30 días de garantía TrendSpot",
+    "30 días de garantía iCLUB Store",
     "Cubre defectos de funcionamiento",
     "Soporte post-venta incluido",
   ],
@@ -29,13 +29,13 @@ export default function WarrantyInfo({
   return (
     <div className="glass-panel rounded-xl p-6 space-y-4">
       <div className="flex items-center gap-2.5">
-        <HiOutlineShieldCheck className="w-5 h-5 text-slate-300" />
-        <h3 className="text-sm font-medium text-white">Garantía</h3>
+        <HiOutlineShieldCheck className="w-5 h-5 text-slate-600" />
+        <h3 className="text-sm font-medium text-slate-900">Garantía</h3>
       </div>
-      <ul className="space-y-2.5 text-sm text-slate-400">
+      <ul className="space-y-2.5 text-sm text-slate-500">
         {items.map((item) => (
           <li key={item} className="flex items-start gap-2">
-            <span className="text-green-400 mt-0.5">&#8226;</span>
+            <span className="text-[#c462ab] mt-0.5">&#8226;</span>
             {item}
           </li>
         ))}

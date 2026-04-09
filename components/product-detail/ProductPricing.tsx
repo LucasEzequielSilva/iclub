@@ -19,13 +19,13 @@ export default function ProductPricing({ product }: { product: Product }) {
           </span>
         )}
         {discount && (
-          <span className="text-sm font-medium px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">
+          <span className="text-sm font-medium px-2.5 py-1 rounded-full bg-red-500/10 text-red-500 border border-red-500/20">
             -{discount}%
           </span>
         )}
       </div>
 
-      <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white tracking-tight">
+      <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-900 tracking-tight">
         {formatPrice(product.price)}
       </p>
 

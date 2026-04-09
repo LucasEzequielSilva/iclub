@@ -75,16 +75,16 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
     <AnimatePresence onExitComplete={onComplete}>
       {visible && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white"
           role="status"
-          aria-label="Cargando TrendSpot"
+          aria-label="Cargando iCLUB Store"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.05 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
           <div className="relative z-10 flex flex-col items-center">
             <div className="flex overflow-hidden">
-              {"TRENDSPOT".split("").map((char, i) => (
+              {"iCLUB".split("").map((char, i) => (
                 <motion.span
                   key={i}
                   className="text-5xl md:text-7xl font-bold tracking-widest"
@@ -92,7 +92,7 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
                     fontFamily:
                       "var(--font-space-grotesk), system-ui, sans-serif",
                     background:
-                      "linear-gradient(180deg, #ffffff 0%, #c0c0c0 40%, #ffffff 55%, #a0a0a0 100%)",
+                      "linear-gradient(180deg, #c462ab 0%, #9a4a87 40%, #c462ab 55%, #7a3a6a 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -119,7 +119,7 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
               className="h-px mt-5 w-[140px] origin-center"
               style={{
                 background:
-                  "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)",
+                  "linear-gradient(90deg, transparent, rgba(196,98,171,0.5), transparent)",
               }}
               initial={{ scaleX: 0, opacity: 0 }}
               animate={

@@ -33,13 +33,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const product = getProductById(id);
-  if (!product) return { title: "Producto no encontrado | TrendSpot" };
+  if (!product) return { title: "Producto no encontrado | iCLUB Store" };
 
   return {
-    title: `${product.name} ${product.capacity} ${product.color} | TrendSpot`,
+    title: `${product.name} ${product.capacity} ${product.color} | iCLUB Store`,
     description: `${product.name} ${product.capacity} en color ${product.color}. Condición: ${product.condition}. ${formatPrice(product.price)}. Garantía incluida.`,
     openGraph: {
-      title: `${product.name} ${product.capacity} | TrendSpot`,
+      title: `${product.name} ${product.capacity} | iCLUB Store`,
       description: `Comprá tu ${product.name} al mejor precio. ${product.condition}. ${formatPrice(product.price)}.`,
       locale: "es_AR",
       type: "website",

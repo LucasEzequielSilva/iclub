@@ -17,18 +17,17 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "TrendSpot | iPhones verificados al mejor precio",
+  title: "iCLUB Store | iPhones verificados al mejor precio",
   description:
     "iPhones seminuevos con batería al 100% y garantía de 30 días. Precios en USD, entrega en el día en CABA/GBA. iPhone 11 al 16 Pro Max.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
-      { url: "/favicon.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
-    apple: "/favicon.png",
+    apple: "/favicon.svg",
   },
   openGraph: {
-    title: "TrendSpot | iPhones verificados al mejor precio",
+    title: "iCLUB Store | iPhones verificados al mejor precio",
     description:
       "iPhones seminuevos con batería al 100% y garantía de 30 días. Precios en USD, entrega en el día en CABA/GBA.",
     locale: "es_AR",
@@ -43,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${inter.className} ${spaceGrotesk.variable} bg-black text-slate-300 antialiased`}>
+      <body className={`${inter.className} ${spaceGrotesk.variable} bg-white text-slate-700 antialiased`}>
         <CurrencyProvider>{children}</CurrencyProvider>
         <Analytics />
       </body>
