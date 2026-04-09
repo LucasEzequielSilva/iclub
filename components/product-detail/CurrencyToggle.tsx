@@ -9,12 +9,12 @@ export default function CurrencyToggle() {
     <div className="flex items-center gap-3">
       <button
         onClick={toggleCurrency}
-        className="cursor-pointer relative flex items-center bg-white/5 rounded-full p-1 border border-white/10 min-h-[44px]"
+        className="cursor-pointer relative flex items-center bg-slate-100 rounded-full p-1 border border-slate-200 min-h-[44px]"
       >
         <span
           className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
             currency === "USD"
-              ? "bg-white text-black"
+              ? "bg-white text-slate-900 shadow-sm"
               : "text-slate-400"
           }`}
         >
@@ -23,7 +23,7 @@ export default function CurrencyToggle() {
         <span
           className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
             currency === "ARS"
-              ? "bg-white text-black"
+              ? "bg-white text-slate-900 shadow-sm"
               : "text-slate-400"
           }`}
         >
@@ -35,7 +35,7 @@ export default function CurrencyToggle() {
           href="https://dolarhoy.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-slate-500 hover:text-slate-300 transition-colors underline decoration-dotted underline-offset-2"
+          className="text-xs text-slate-400 hover:text-slate-600 transition-colors underline decoration-dotted underline-offset-2"
         >
           Blue: ${ new Intl.NumberFormat("de-DE").format(blueRate)}
         </a>

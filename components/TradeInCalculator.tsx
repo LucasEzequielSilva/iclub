@@ -31,8 +31,8 @@ function StepNumber({ n, done }: { n: number; done: boolean }) {
     <span
       className={`inline-flex items-center justify-center size-6 rounded-full text-xs font-bold shrink-0 transition-colors ${
         done
-          ? "bg-green-500 text-white"
-          : "bg-white/10 text-slate-400"
+          ? "bg-[#c462ab] text-white"
+          : "bg-slate-100 text-slate-400"
       }`}
     >
       {done ? "✓" : n}
@@ -124,10 +124,10 @@ export default function TradeInCalculator() {
     <section id="trade-in" className="py-20 px-6">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-2 text-center">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2 text-center">
           ¿Cuánto vale tu iPhone?
         </h2>
-        <p className="text-slate-400 text-center mb-4">
+        <p className="text-slate-500 text-center mb-4">
           Cotizá tu equipo en segundos y recibí una oferta de canje.
         </p>
 
@@ -137,7 +137,7 @@ export default function TradeInCalculator() {
             <div
               key={step}
               className={`h-1 flex-1 rounded-full transition-all duration-500 ${
-                stepsCompleted >= step ? "bg-green-500" : "bg-white/10"
+                stepsCompleted >= step ? "bg-[#c462ab]" : "bg-slate-200"
               }`}
             />
           ))}
@@ -146,7 +146,7 @@ export default function TradeInCalculator() {
         <div className="space-y-6">
           {/* Step 1: Model */}
           <div className="glass-panel rounded-2xl p-5 space-y-3">
-            <label className="flex items-center gap-3 text-sm font-medium text-slate-300">
+            <label className="flex items-center gap-3 text-sm font-medium text-slate-600">
               <StepNumber n={1} done={!!selectedModelName} />
               <HiOutlineDevicePhoneMobile aria-hidden="true" className="size-4" />
               <span className="uppercase tracking-wider">¿Qué modelo tenés?</span>
@@ -154,11 +154,11 @@ export default function TradeInCalculator() {
             <select
               value={selectedModelName}
               onChange={(e) => handleModelChange(e.target.value)}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white appearance-none cursor-pointer hover:border-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500/50 text-base"
+              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-slate-900 appearance-none cursor-pointer hover:border-slate-300 transition-colors focus:outline-none focus:ring-2 focus:ring-[#c462ab]/50 text-base"
             >
-              <option value="" className="bg-neutral-900">Seleccioná tu modelo</option>
+              <option value="">Seleccioná tu modelo</option>
               {iphoneModels.map((m) => (
-                <option key={m.name} value={m.name} className="bg-neutral-900">
+                <option key={m.name} value={m.name}>
                   {m.name}
                 </option>
               ))}
@@ -168,7 +168,7 @@ export default function TradeInCalculator() {
           {/* Step 2: Storage */}
           {selectedModel && (
             <div ref={step2Ref} className="glass-panel rounded-2xl p-5 space-y-3 animate-[fadeSlideIn_0.3s_ease-out]">
-              <label className="flex items-center gap-3 text-sm font-medium text-slate-300">
+              <label className="flex items-center gap-3 text-sm font-medium text-slate-600">
                 <StepNumber n={2} done={selectedStorage !== null} />
                 <HiOutlineCpuChip aria-hidden="true" className="size-4" />
                 <span className="uppercase tracking-wider">¿Cuánto almacenamiento?</span>
@@ -180,8 +180,8 @@ export default function TradeInCalculator() {
                     onClick={() => handleStorageSelect(gb)}
                     className={`cursor-pointer flex-1 min-w-[80px] px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                       selectedStorage === gb
-                        ? "bg-green-500 text-white shadow-lg shadow-green-500/25 scale-[1.02]"
-                        : "bg-white/5 text-slate-300 border border-white/10 hover:border-white/25 hover:bg-white/8"
+                        ? "bg-[#c462ab] text-white shadow-lg shadow-[#c462ab]/25 scale-[1.02]"
+                        : "bg-slate-50 text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-100"
                     }`}
                   >
                     {formatStorageLabel(gb)}
@@ -194,7 +194,7 @@ export default function TradeInCalculator() {
           {/* Step 3: Battery */}
           {selectedModel && selectedStorage !== null && (
             <div ref={step3Ref} className="glass-panel rounded-2xl p-5 space-y-3 animate-[fadeSlideIn_0.3s_ease-out]">
-              <label className="flex items-center gap-3 text-sm font-medium text-slate-300">
+              <label className="flex items-center gap-3 text-sm font-medium text-slate-600">
                 <StepNumber n={3} done={!!batteryHealth} />
                 <HiOutlineBattery50 aria-hidden="true" className="size-4" />
                 <span className="uppercase tracking-wider">Salud de batería</span>
@@ -206,22 +206,22 @@ export default function TradeInCalculator() {
                     onClick={() => handleBatterySelect(range)}
                     className={`cursor-pointer flex-1 min-w-[100px] px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                       batteryHealth === range
-                        ? "bg-green-500 text-white shadow-lg shadow-green-500/25 scale-[1.02]"
-                        : "bg-white/5 text-slate-300 border border-white/10 hover:border-white/25 hover:bg-white/8"
+                        ? "bg-[#c462ab] text-white shadow-lg shadow-[#c462ab]/25 scale-[1.02]"
+                        : "bg-slate-50 text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-100"
                     }`}
                   >
                     {range.replace("-", "–")}%
                   </button>
                 ))}
               </div>
-              <p className="text-xs text-slate-500">Ajustes → Batería → Estado de la batería en tu iPhone</p>
+              <p className="text-xs text-slate-400">Ajustes → Batería → Estado de la batería en tu iPhone</p>
             </div>
           )}
 
           {/* Step 4: Condition */}
           {price !== null && (
             <div ref={step4Ref} className="glass-panel rounded-2xl p-5 space-y-3 animate-[fadeSlideIn_0.3s_ease-out]">
-              <label className="flex items-center gap-3 text-sm font-medium text-slate-300">
+              <label className="flex items-center gap-3 text-sm font-medium text-slate-600">
                 <StepNumber n={4} done={true} />
                 <HiOutlineWrenchScrewdriver aria-hidden="true" className="size-4" />
                 <span className="uppercase tracking-wider">Estado del equipo</span>
@@ -229,13 +229,13 @@ export default function TradeInCalculator() {
 
               {!showDamages && selectedDamages.length === 0 ? (
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-green-400 text-sm">
+                  <div className="flex items-center gap-2 text-[#c462ab] text-sm">
                     <HiOutlineCheckCircle aria-hidden="true" className="size-5" />
                     Perfecto estado
                   </div>
                   <button
                     onClick={() => setShowDamages(true)}
-                    className="cursor-pointer text-xs text-slate-500 hover:text-slate-300 transition-colors underline underline-offset-2"
+                    className="cursor-pointer text-xs text-slate-400 hover:text-slate-600 transition-colors underline underline-offset-2"
                   >
                     ¿Tiene algún daño?
                   </button>
@@ -248,11 +248,11 @@ export default function TradeInCalculator() {
                         setShowDamages(false);
                       }
                     }}
-                    className="cursor-pointer flex items-center gap-1 text-xs text-slate-500 hover:text-slate-300 transition-colors"
+                    className="cursor-pointer flex items-center gap-1 text-xs text-slate-400 hover:text-slate-600 transition-colors"
                   >
                     Seleccioná los daños que tenga
                     {selectedDamages.length > 0 && (
-                      <span className="ml-1 bg-red-500/20 text-red-400 px-1.5 py-0.5 rounded-full text-[10px] font-bold">
+                      <span className="ml-1 bg-red-500/20 text-red-500 px-1.5 py-0.5 rounded-full text-[10px] font-bold">
                         {selectedDamages.length}
                       </span>
                     )}
@@ -271,18 +271,18 @@ export default function TradeInCalculator() {
                           onClick={() => toggleDamage(damage.id)}
                           className={`cursor-pointer flex items-center justify-between gap-2 px-3 py-2 rounded-lg text-sm transition-all text-left ${
                             isActive
-                              ? "bg-red-500/10 border border-red-500/40 text-red-400"
-                              : "bg-white/[0.03] border border-white/5 text-slate-400 hover:border-white/15 hover:text-slate-300"
+                              ? "bg-red-50 border border-red-300 text-red-500"
+                              : "bg-slate-50 border border-slate-200 text-slate-500 hover:border-slate-300 hover:text-slate-600"
                           }`}
                         >
                           <span className="flex items-center gap-2">
                             <HiOutlineExclamationTriangle
                               aria-hidden="true"
-                              className={`size-3.5 shrink-0 ${isActive ? "text-red-400" : "text-slate-600"}`}
+                              className={`size-3.5 shrink-0 ${isActive ? "text-red-500" : "text-slate-400"}`}
                             />
                             <span className="text-[13px]">{damage.label}</span>
                           </span>
-                          <span className={`text-[11px] shrink-0 ${isActive ? "text-red-400" : "text-slate-600"}`}>
+                          <span className={`text-[11px] shrink-0 ${isActive ? "text-red-500" : "text-slate-400"}`}>
                             −${discountAmount}
                           </span>
                         </button>
@@ -295,7 +295,7 @@ export default function TradeInCalculator() {
                         setSelectedDamages([]);
                         setShowDamages(false);
                       }}
-                      className="cursor-pointer text-xs text-slate-500 hover:text-slate-300 transition-colors"
+                      className="cursor-pointer text-xs text-slate-400 hover:text-slate-600 transition-colors"
                     >
                       Limpiar daños
                     </button>
@@ -309,26 +309,26 @@ export default function TradeInCalculator() {
           {price !== null && (
             <div ref={priceRef} className="animate-[fadeSlideIn_0.3s_ease-out]">
               {price > 0 ? (
-                <div className="rounded-2xl border border-green-500/30 bg-green-500/5 p-8 text-center space-y-2">
-                  <p className="text-sm text-slate-400">Valor estimado de tu equipo</p>
-                  <p className="text-5xl font-extrabold text-white tracking-tight" style={{ fontFamily: "var(--font-space-grotesk)" }}>
+                <div className="rounded-2xl border border-[#c462ab]/30 bg-[#c462ab]/5 p-8 text-center space-y-2">
+                  <p className="text-sm text-slate-500">Valor estimado de tu equipo</p>
+                  <p className="text-5xl font-extrabold text-slate-900 tracking-tight" style={{ fontFamily: "var(--font-space-grotesk)" }}>
                     USD {price}
                   </p>
-                  <p className="text-xs text-slate-500 pt-1">
+                  <p className="text-xs text-slate-400 pt-1">
                     {selectedModelName} · {formatStorageLabel(selectedStorage!)} · Batería {batteryHealth?.replace("-", "–")}%
                     {selectedDamages.length > 0 && ` · ${selectedDamages.length} daño${selectedDamages.length > 1 ? "s" : ""}`}
                   </p>
                 </div>
               ) : (
-                <div className="rounded-2xl border border-red-500/30 bg-red-500/5 p-6 text-center space-y-2">
-                  <p className="text-sm text-red-400">
+                <div className="rounded-2xl border border-red-300 bg-red-50 p-6 text-center space-y-2">
+                  <p className="text-sm text-red-500">
                     Los daños superan el valor del equipo.
                   </p>
                   <a
                     href="https://wa.me/5491127967222"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-green-400 hover:text-green-300 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm text-[#c462ab] hover:text-[#b0559a] transition-colors"
                   >
                     <FaWhatsapp aria-hidden="true" className="size-4" />
                     Contactanos para una evaluación personalizada
@@ -342,15 +342,15 @@ export default function TradeInCalculator() {
           {price !== null && price > 0 && (
             <div className="space-y-4 pt-2 animate-[fadeSlideIn_0.3s_ease-out]">
               <div className="flex items-center gap-3 mb-2">
-                <div className="h-px flex-1 bg-white/10" />
-                <span className="text-xs text-slate-500 uppercase tracking-widest">Enviá tu cotización</span>
-                <div className="h-px flex-1 bg-white/10" />
+                <div className="h-px flex-1 bg-slate-200" />
+                <span className="text-xs text-slate-400 uppercase tracking-widest">Enviá tu cotización</span>
+                <div className="h-px flex-1 bg-slate-200" />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {/* Name */}
                 <div className="space-y-2">
-                  <label className="flex items-center gap-2 text-xs font-medium text-slate-400 uppercase tracking-wider">
+                  <label className="flex items-center gap-2 text-xs font-medium text-slate-500 uppercase tracking-wider">
                     <HiOutlineUser aria-hidden="true" className="size-3.5" />
                     Tu nombre
                   </label>
@@ -359,24 +359,24 @@ export default function TradeInCalculator() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Nombre completo"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-colors text-sm"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#c462ab]/50 transition-colors text-sm"
                   />
                 </div>
 
                 {/* Interested model */}
                 <div className="space-y-2">
-                  <label className="flex items-center gap-2 text-xs font-medium text-slate-400 uppercase tracking-wider">
+                  <label className="flex items-center gap-2 text-xs font-medium text-slate-500 uppercase tracking-wider">
                     <HiOutlineShoppingCart aria-hidden="true" className="size-3.5" />
                     ¿Qué modelo querés?
                   </label>
                   <select
                     value={interestedModel}
                     onChange={(e) => setInterestedModel(e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white appearance-none cursor-pointer hover:border-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500/50 text-sm"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 appearance-none cursor-pointer hover:border-slate-300 transition-colors focus:outline-none focus:ring-2 focus:ring-[#c462ab]/50 text-sm"
                   >
-                    <option value="" className="bg-neutral-900">Seleccioná modelo</option>
+                    <option value="">Seleccioná modelo</option>
                     {interestedModels.map((m) => (
-                      <option key={m} value={m} className="bg-neutral-900">
+                      <option key={m} value={m}>
                         {m}
                       </option>
                     ))}
@@ -386,7 +386,7 @@ export default function TradeInCalculator() {
 
               {/* Message preview */}
               {canSend && (
-                <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3 text-[13px] text-slate-400 leading-relaxed animate-[fadeSlideIn_0.2s_ease-out]">
+                <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-[13px] text-slate-500 leading-relaxed animate-[fadeSlideIn_0.2s_ease-out]">
                   {whatsappMessage}
                 </div>
               )}
@@ -398,8 +398,8 @@ export default function TradeInCalculator() {
                 rel="noopener noreferrer"
                 className={`flex items-center justify-center gap-2 w-full py-4 rounded-2xl text-base font-bold transition-all ${
                   canSend
-                    ? "bg-green-500 text-white hover:bg-green-600 cursor-pointer shadow-lg shadow-green-500/20 hover:shadow-green-500/30 hover:scale-[1.01] active:scale-[0.99]"
-                    : "bg-white/5 text-slate-500 cursor-not-allowed"
+                    ? "bg-[#c462ab] text-white hover:bg-[#b0559a] cursor-pointer shadow-lg shadow-[#c462ab]/20 hover:shadow-[#c462ab]/30 hover:scale-[1.01] active:scale-[0.99]"
+                    : "bg-slate-100 text-slate-400 cursor-not-allowed"
                 }`}
                 onClick={(e) => { if (!canSend) e.preventDefault(); }}
               >

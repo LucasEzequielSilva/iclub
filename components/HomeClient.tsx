@@ -12,7 +12,7 @@ export default function HomeClient({
   const [loaderDone, setLoaderDone] = useState(false);
 
   useEffect(() => {
-    const hasVisited = localStorage.getItem("trendspot_visited");
+    const hasVisited = localStorage.getItem("iclub_visited");
     if (hasVisited) {
       setLoaderDone(true);
     } else {
@@ -23,7 +23,7 @@ export default function HomeClient({
   const handleLoaderComplete = () => {
     setLoaderDone(true);
     setShowLoader(false);
-    localStorage.setItem("trendspot_visited", "1");
+    localStorage.setItem("iclub_visited", "1");
   };
 
   return (

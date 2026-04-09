@@ -15,10 +15,10 @@ export default function ConditionExplainer({
   return (
     <button
       onClick={() => setOpen(!open)}
-      className="cursor-pointer w-full glass-panel rounded-xl p-4 text-left transition-all hover:bg-white/5 min-h-[44px]"
+      className="cursor-pointer w-full glass-panel rounded-xl p-4 text-left transition-all hover:bg-slate-50 min-h-[44px]"
     >
       <div className="flex items-center justify-between gap-3">
-        <p className="text-sm font-medium text-white">{info.label}</p>
+        <p className="text-sm font-medium text-slate-900">{info.label}</p>
         <HiChevronDown
           className={`w-5 h-5 text-slate-400 transition-transform shrink-0 ${open ? "rotate-180" : ""}`}
         />

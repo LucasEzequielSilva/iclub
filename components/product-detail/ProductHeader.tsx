@@ -5,16 +5,16 @@ const conditionStyles: Record<
   { classes: string; dot: string }
 > = {
   Sellado: {
-    classes: "bg-green-500/10 text-green-400 border-green-500/20",
-    dot: "bg-green-400",
+    classes: "bg-[#c462ab]/10 text-[#c462ab] border-[#c462ab]/20",
+    dot: "bg-[#c462ab]",
   },
   "A+": {
-    classes: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-    dot: "bg-blue-400",
+    classes: "bg-blue-500/10 text-blue-500 border-blue-500/20",
+    dot: "bg-blue-500",
   },
   A: {
-    classes: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
-    dot: "bg-yellow-400",
+    classes: "bg-yellow-500/10 text-yellow-600 border-yellow-500/20",
+    dot: "bg-yellow-500",
   },
 };
 
@@ -30,11 +30,11 @@ export default function ProductHeader({ product }: { product: Product }) {
           <span className={`size-1.5 rounded-full ${style.dot}`} />
           {product.condition}
         </span>
-        <span className="text-xs text-slate-500">
+        <span className="text-xs text-slate-400">
           {product.capacity} &middot; {product.color}
         </span>
       </div>
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-white leading-tight text-balance">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-slate-900 leading-tight text-balance">
         {product.category === "android" || product.category === "consolas" ? product.name : `Apple ${product.name}`}
       </h1>
     </div>

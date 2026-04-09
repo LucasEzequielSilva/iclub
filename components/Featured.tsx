@@ -48,7 +48,7 @@ export default function Featured() {
   return (
     <section id="featured" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-medium text-white mb-4 text-balance">
+        <h2 className="text-3xl md:text-4xl font-medium text-slate-900 mb-4 text-balance">
           Recomendados
         </h2>
         <p className="text-slate-500 mb-12 text-pretty">
@@ -62,12 +62,12 @@ export default function Featured() {
             return (
               <div
                 key={product.id}
-                className="glass-panel rounded-xl overflow-hidden border-white/15 hover:border-white/25 transition-[border-color] group"
+                className="glass-panel rounded-xl overflow-hidden border-slate-200 hover:border-slate-300 transition-[border-color] group"
               >
                 {/* Image / Color area */}
                 <Link href={`/producto/${product.id}`} className="relative block">
                   {hasImage ? (
-                    <div className="relative aspect-[16/10] overflow-hidden bg-black/30">
+                    <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                       <Image
                         src={product.images![0]}
                         alt={`${product.name} ${product.color}`}
@@ -75,7 +75,7 @@ export default function Featured() {
                         className="object-cover group-hover:scale-105 transition-transform duration-200"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                     </div>
                   ) : (
                     <div
@@ -84,12 +84,12 @@ export default function Featured() {
                         background: `
                           radial-gradient(ellipse at 30% 40%, ${product.colorHex}35 0%, transparent 60%),
                           radial-gradient(ellipse at 70% 60%, ${product.colorHex}18 0%, transparent 50%),
-                          rgba(0,0,0,0.15)
+                          rgba(248,248,248,1)
                         `,
                       }}
                     >
                       <div
-                        className="size-20 rounded-full ring-2 ring-white/10 shadow-lg relative overflow-hidden"
+                        className="size-20 rounded-full ring-2 ring-black/5 shadow-lg relative overflow-hidden"
                         style={{ backgroundColor: product.colorHex }}
                       >
                         <div
@@ -103,8 +103,8 @@ export default function Featured() {
                     </div>
                   )}
                   {/* Recomendado badge */}
-                  <div className="absolute top-4 left-4 flex items-center gap-2 text-yellow-400 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                    <Star aria-hidden="true" className="size-3.5 fill-yellow-400" />
+                  <div className="absolute top-4 left-4 flex items-center gap-2 text-yellow-500 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                    <Star aria-hidden="true" className="size-3.5 fill-yellow-500" />
                     <span className="text-xs font-medium uppercase">
                       Recomendado
                     </span>
@@ -116,11 +116,11 @@ export default function Featured() {
                   <div>
                     <Link
                       href={`/producto/${product.id}`}
-                      className="text-xl sm:text-2xl font-medium text-white hover:underline"
+                      className="text-xl sm:text-2xl font-medium text-slate-900 hover:underline"
                     >
                       {product.name}
                     </Link>
-                    <p className="text-sm text-slate-400 mt-2 leading-relaxed">
+                    <p className="text-sm text-slate-500 mt-2 leading-relaxed">
                       {reason}
                     </p>
                   </div>
@@ -130,20 +130,20 @@ export default function Featured() {
                       {product.price > 0 ? (
                         arsPrice ? (
                           <>
-                            <p className="text-2xl sm:text-3xl font-semibold text-white tabular-nums truncate">
+                            <p className="text-2xl sm:text-3xl font-semibold text-slate-900 tabular-nums truncate">
                               ${new Intl.NumberFormat("de-DE").format(arsPrice)}
                             </p>
-                            <p className="text-sm text-slate-500 tabular-nums">
+                            <p className="text-sm text-slate-400 tabular-nums">
                               {formatPrice(product.price)}
                             </p>
                           </>
                         ) : (
-                          <p className="text-2xl sm:text-3xl font-semibold text-white tabular-nums truncate">
+                          <p className="text-2xl sm:text-3xl font-semibold text-slate-900 tabular-nums truncate">
                             {formatPrice(product.price)}
                           </p>
                         )
                       ) : (
-                        <p className="text-lg font-medium text-slate-400">
+                        <p className="text-lg font-medium text-slate-500">
                           Consultar precio
                         </p>
                       )}
@@ -151,7 +151,7 @@ export default function Featured() {
                     <div className="flex items-center justify-between gap-4 pt-1">
                       <Link
                         href={`/producto/${product.id}`}
-                        className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors min-h-[44px] cursor-pointer"
+                        className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-900 transition-colors min-h-[44px] cursor-pointer"
                       >
                         Ver detalle
                         <FiArrowRight aria-hidden="true" className="size-3.5" />
@@ -160,7 +160,7 @@ export default function Featured() {
                         href={getWhatsAppLink(product)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-green-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 min-h-[44px] rounded-full text-sm font-medium hover:bg-green-600 active:scale-95 transition-[transform,background-color] cursor-pointer"
+                        className="flex items-center gap-2 bg-[#c462ab] text-white px-5 sm:px-6 py-2.5 sm:py-3 min-h-[44px] rounded-full text-sm font-medium hover:bg-[#b0559a] active:scale-95 transition-[transform,background-color] cursor-pointer"
                       >
                         <FaWhatsapp aria-hidden="true" className="size-4" />
                         Consultar

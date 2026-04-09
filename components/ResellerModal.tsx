@@ -26,40 +26,40 @@ function ModalContent({ onClose }: { onClose: () => void }) {
       onClick={onClose}
     >
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
       {/* Modal */}
       <div
-        className="relative w-full max-w-lg rounded-2xl border border-white/10 bg-[#0a0a0a] p-6 sm:p-8 space-y-6 shadow-2xl animate-in fade-in zoom-in-95"
+        className="relative w-full max-w-lg rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 space-y-6 shadow-2xl animate-in fade-in zoom-in-95"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close */}
         <button
           onClick={onClose}
-          className="cursor-pointer absolute top-4 right-4 text-slate-500 hover:text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+          className="cursor-pointer absolute top-4 right-4 text-slate-400 hover:text-slate-900 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
           aria-label="Cerrar"
         >
           <HiOutlineXMark className="size-6" />
         </button>
 
         {/* Icon */}
-        <div className="size-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-          <HiOutlineBuildingStorefront className="size-6 text-white" />
+        <div className="size-12 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center">
+          <HiOutlineBuildingStorefront className="size-6 text-slate-900" />
         </div>
 
         {/* Content */}
         <div className="space-y-3">
-          <h3 className="text-xl sm:text-2xl font-medium text-white text-balance">
+          <h3 className="text-xl sm:text-2xl font-medium text-slate-900 text-balance">
             Programa para revendedores
           </h3>
-          <p className="text-sm sm:text-base text-slate-400 leading-relaxed text-pretty">
+          <p className="text-sm sm:text-base text-slate-500 leading-relaxed text-pretty">
             Vendés iPhones o querés comenzar a revender? Accedé a precios
             mayoristas, stock actualizado y soporte directo para revendedores.
             Ideal para técnicos, tiendas y vendedores online.
           </p>
         </div>
 
-        <p className="text-[11px] text-slate-600">
+        <p className="text-[11px] text-slate-400">
           Reposición garantizada en 48 hs — Stock constante para que nunca te quedes sin mercadería.
         </p>
 
@@ -68,7 +68,7 @@ function ModalContent({ onClose }: { onClose: () => void }) {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2.5 w-full bg-green-500 text-white px-6 py-3.5 min-h-[44px] rounded-full text-sm font-semibold hover:bg-green-600 active:scale-95 transition-[transform,background-color]"
+          className="flex items-center justify-center gap-2.5 w-full bg-[#c462ab] text-white px-6 py-3.5 min-h-[44px] rounded-full text-sm font-semibold hover:bg-[#b0559a] active:scale-95 transition-[transform,background-color]"
         >
           <FaWhatsapp className="size-5" />
           Pedir lista mayorista
@@ -88,7 +88,7 @@ export default function ResellerModal({ className }: { className?: string }) {
         onClick={() => setOpen(true)}
         className={
           className ??
-          "cursor-pointer text-sm text-slate-400 hover:text-white transition-colors min-h-[44px] inline-flex items-center px-2"
+          "cursor-pointer text-sm text-slate-500 hover:text-slate-900 transition-colors min-h-[44px] inline-flex items-center px-2"
         }
       >
         Revendedores

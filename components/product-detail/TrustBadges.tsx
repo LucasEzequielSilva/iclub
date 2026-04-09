@@ -16,7 +16,7 @@ export default function TrustBadges({ category, condition, productName }: { cate
   const isPS5 = productName?.toLowerCase().includes("playstation");
 
   const badges: { icon: typeof HiOutlineShieldCheck; label: string }[] = [
-    { icon: HiOutlineShieldCheck, label: "30 días de garantía TrendSpot" },
+    { icon: HiOutlineShieldCheck, label: "30 días de garantía iCLUB Store" },
   ];
 
   if (!isConsola) {
@@ -50,19 +50,19 @@ export default function TrustBadges({ category, condition, productName }: { cate
           const Icon = badge.icon;
           return (
             <div key={badge.label} className="flex items-center gap-2">
-              <Icon aria-hidden="true" className="size-4 text-slate-400 shrink-0" />
-              <span className="text-xs text-slate-400">{badge.label}</span>
+              <Icon aria-hidden="true" className="size-4 text-slate-500 shrink-0" />
+              <span className="text-xs text-slate-500">{badge.label}</span>
             </div>
           );
         })}
       </div>
       {isIphone && (
-        <p className="text-[11px] text-slate-500 text-center border-t border-white/5 pt-3">
+        <p className="text-[11px] text-slate-400 text-center border-t border-slate-200 pt-3">
           IMEI verificado y libre de bloqueo
         </p>
       )}
       {isPS5 && (
-        <p className="text-[11px] text-slate-500 text-center border-t border-white/5 pt-3">
+        <p className="text-[11px] text-slate-400 text-center border-t border-slate-200 pt-3">
           Joystick adicional no incluido — solo demostración
         </p>
       )}

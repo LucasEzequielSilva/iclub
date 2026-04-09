@@ -8,7 +8,7 @@ export default function RelatedProducts({ product }: { product: Product }) {
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-6 sm:mb-8 text-balance">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-slate-900 mb-6 sm:mb-8 text-balance">
         También te puede interesar
       </h2>
       {/* Horizontal scroll on mobile, grid on desktop */}

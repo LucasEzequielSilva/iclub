@@ -94,13 +94,13 @@ export default function Inventory() {
   return (
     <section id="inventory" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-medium text-white mb-4 text-balance">
+        <h2 className="text-3xl md:text-4xl font-medium text-slate-900 mb-4 text-balance">
           Stock disponible
         </h2>
         <p className="text-slate-500 mb-2 text-pretty">
           Todos los equipos con batería al 100%, verificados y con garantía de 30 días.
         </p>
-        <p className="text-xs text-slate-600 mb-6">
+        <p className="text-xs text-slate-400 mb-6">
           Reposición permanente — Si no está en stock, lo conseguimos en 48 hs.
         </p>
 
@@ -113,8 +113,8 @@ export default function Inventory() {
                 onClick={() => switchCategory(cat.key)}
                 className={`cursor-pointer px-4 sm:px-6 py-2.5 rounded-full text-sm font-medium border transition-[border-color,background-color,color] ${
                   category === cat.key
-                    ? "bg-white text-black border-white"
-                    : "glass-panel border-white/10 text-slate-400 hover:border-white/20 hover:text-white"
+                    ? "bg-slate-900 text-white border-slate-900"
+                    : "glass-panel border-slate-200 text-slate-500 hover:border-slate-300 hover:text-slate-900"
                 }`}
               >
                 {cat.label}
@@ -124,7 +124,7 @@ export default function Inventory() {
 
           <div className="flex items-center gap-2">
             <div className="relative">
-              <HiOutlineMagnifyingGlass className="absolute left-3 top-1/2 -translate-y-1/2 size-3.5 text-slate-500" />
+              <HiOutlineMagnifyingGlass className="absolute left-3 top-1/2 -translate-y-1/2 size-3.5 text-slate-400" />
               <input
                 type="text"
                 value={search}
@@ -133,7 +133,7 @@ export default function Inventory() {
                   setVisible(INITIAL_COUNT);
                 }}
                 placeholder="Buscar..."
-                className="w-32 sm:w-40 bg-white/[0.03] border border-white/10 rounded-full pl-9 pr-8 py-2 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-white/20 focus:w-48 sm:focus:w-52 transition-all"
+                className="w-32 sm:w-40 bg-slate-50 border border-slate-200 rounded-full pl-9 pr-8 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#c462ab]/20 focus:w-48 sm:focus:w-52 transition-all"
               />
               {search && (
                 <button
@@ -141,7 +141,7 @@ export default function Inventory() {
                     setSearch("");
                     setVisible(INITIAL_COUNT);
                   }}
-                  className="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white p-0.5"
+                  className="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-900 p-0.5"
                 >
                   <HiOutlineXMark className="size-3.5" />
                 </button>
@@ -151,8 +151,8 @@ export default function Inventory() {
               onClick={cycleSort}
               className={`cursor-pointer flex items-center gap-1.5 px-4 py-2 rounded-full text-sm border transition-[border-color,background-color,color] ${
                 sort !== "default"
-                  ? "border-white/25 bg-white/10 text-white"
-                  : "border-white/10 text-slate-400 hover:border-white/20 hover:text-white"
+                  ? "border-slate-300 bg-slate-100 text-slate-900"
+                  : "border-slate-200 text-slate-500 hover:border-slate-300 hover:text-slate-900"
               }`}
             >
               <HiArrowsUpDown className="size-3.5" />
@@ -169,14 +169,14 @@ export default function Inventory() {
           </div>
         ) : (
           <div className="glass-panel rounded-xl p-12 text-center">
-            <p className="text-slate-400">No se encontraron resultados para &ldquo;{search}&rdquo;</p>
+            <p className="text-slate-500">No se encontraron resultados para &ldquo;{search}&rdquo;</p>
           </div>
         )}
         {hasMore && (
           <div className="mt-12 flex justify-center">
             <button
               onClick={showMore}
-              className="cursor-pointer px-8 py-3.5 min-h-[44px] rounded-full border border-white/15 text-white text-sm font-medium hover:bg-white/5 active:scale-95 transition-[transform,background-color] duration-150 w-full sm:w-auto"
+              className="cursor-pointer px-8 py-3.5 min-h-[44px] rounded-full border border-slate-200 text-slate-700 text-sm font-medium hover:bg-slate-50 active:scale-95 transition-[transform,background-color] duration-150 w-full sm:w-auto"
             >
               Ver más ({currentList.length - visible} restantes)
             </button>

@@ -8,9 +8,9 @@ import { Product, products, formatPrice, getWhatsAppLink, getDiscountPercentage 
 import { useCurrency } from "./CurrencyProvider";
 
 const conditionStyles: Record<Product["condition"], string> = {
-  Sellado: "bg-green-500/10 text-green-400 border-green-500/20",
-  "A+": "bg-blue-500/10 text-blue-400 border-blue-500/20",
-  A: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
+  Sellado: "bg-[#c462ab]/10 text-[#c462ab] border-[#c462ab]/20",
+  "A+": "bg-blue-500/10 text-blue-500 border-blue-500/20",
+  A: "bg-yellow-500/10 text-yellow-600 border-yellow-500/20",
 };
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -27,11 +27,11 @@ export default function ProductCard({ product }: { product: Product }) {
   const arsPrice = blueRate ? Math.round(product.price * blueRate) : null;
 
   return (
-    <div className="glass-panel rounded-xl overflow-hidden flex flex-col hover:border-white/20 transition-[border-color] group">
+    <div className="glass-panel rounded-xl overflow-hidden flex flex-col hover:border-slate-300 transition-[border-color] group">
       {/* Image area */}
       <Link href={`/producto/${product.id}`} className="relative block">
         {hasImage ? (
-          <div className="relative aspect-[4/3] overflow-hidden bg-black/30">
+          <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
             <Image
               src={product.images![0]}
               alt={`${product.name} ${product.color}`}
@@ -39,7 +39,7 @@ export default function ProductCard({ product }: { product: Product }) {
               className="object-cover group-hover:scale-105 transition-transform duration-200"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
           </div>
         ) : (
           <div
@@ -48,13 +48,13 @@ export default function ProductCard({ product }: { product: Product }) {
               background: `
                 radial-gradient(ellipse at 30% 40%, ${product.colorHex}30 0%, transparent 60%),
                 radial-gradient(ellipse at 70% 60%, ${product.colorHex}15 0%, transparent 50%),
-                rgba(0,0,0,0.2)
+                rgba(248,248,248,1)
               `,
             }}
           >
             <div className="flex flex-col items-center gap-3">
               <div
-                className="size-16 rounded-full ring-2 ring-white/10 shadow-lg relative overflow-hidden"
+                className="size-16 rounded-full ring-2 ring-black/5 shadow-lg relative overflow-hidden"
                 style={{ backgroundColor: product.colorHex }}
               >
                 <div
@@ -90,7 +90,7 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
         {/* Savings badge */}
         {discount != null && discount > 0 && (
-          <span className="absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-green-500/90 text-white">
+          <span className="absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-[#c462ab]/90 text-white">
             -{discount}% vs nuevo
           </span>
         )}
@@ -101,11 +101,11 @@ export default function ProductCard({ product }: { product: Product }) {
         <div>
           <Link
             href={`/producto/${product.id}`}
-            className="text-lg font-medium text-white hover:underline"
+            className="text-lg font-medium text-slate-900 hover:underline"
           >
             {product.name}
           </Link>
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-slate-500">
             {product.condition} · {product.capacity}
           </p>
         </div>
@@ -114,20 +114,20 @@ export default function ProductCard({ product }: { product: Product }) {
           {product.price > 0 ? (
             arsPrice ? (
               <div>
-                <p className="text-xl sm:text-2xl font-semibold text-white tabular-nums truncate">
+                <p className="text-xl sm:text-2xl font-semibold text-slate-900 tabular-nums truncate">
                   ${new Intl.NumberFormat("de-DE").format(arsPrice)}
                 </p>
-                <p className="text-sm text-slate-500 tabular-nums">
+                <p className="text-sm text-slate-400 tabular-nums">
                   {formatPrice(product.price)}
                 </p>
               </div>
             ) : (
-              <p className="text-xl sm:text-2xl font-semibold text-white tabular-nums truncate">
+              <p className="text-xl sm:text-2xl font-semibold text-slate-900 tabular-nums truncate">
                 {formatPrice(product.price)}
               </p>
             )
           ) : (
-            <p className="text-lg font-medium text-slate-400">
+            <p className="text-lg font-medium text-slate-500">
               Consultar precio
             </p>
           )}
@@ -136,14 +136,14 @@ export default function ProductCard({ product }: { product: Product }) {
               href={getWhatsAppLink(product)}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-green-500 text-white px-4 py-2.5 min-h-[44px] rounded-full text-sm font-medium hover:bg-green-600 active:scale-95 transition-[transform,background-color] cursor-pointer"
+              className="flex items-center gap-2 bg-[#c462ab] text-white px-4 py-2.5 min-h-[44px] rounded-full text-sm font-medium hover:bg-[#b0559a] active:scale-95 transition-[transform,background-color] cursor-pointer"
             >
               <FaWhatsapp aria-hidden="true" className="size-4" />
               Consultar
             </a>
             <Link
               href={`/producto/${product.id}`}
-              className="flex items-center gap-1 text-sm text-slate-500 hover:text-white transition-colors min-h-[44px] cursor-pointer"
+              className="flex items-center gap-1 text-sm text-slate-500 hover:text-slate-900 transition-colors min-h-[44px] cursor-pointer"
             >
               Ver detalle
               <FiArrowRight aria-hidden="true" className="size-3.5" />

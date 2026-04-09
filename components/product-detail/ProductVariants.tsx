@@ -51,17 +51,17 @@ function ModelSelector({ product }: { product: Product }) {
               href={`/producto/${model.id}`}
               className={`relative rounded-xl p-3.5 transition-[border-color,background-color] border ${
                 isActive
-                  ? "bg-white/10 border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.05)]"
-                  : "glass-panel border-white/5 hover:border-white/15 hover:bg-white/3"
+                  ? "bg-slate-50 border-slate-300 shadow-sm"
+                  : "glass-panel border-slate-200 hover:border-slate-300 hover:bg-slate-50"
               }`}
             >
               {isActive && (
-                <div className="absolute top-2.5 right-2.5 size-2 rounded-full bg-green-400" />
+                <div className="absolute top-2.5 right-2.5 size-2 rounded-full bg-[#c462ab]" />
               )}
               <div className="space-y-1.5">
                 <p
                   className={`text-sm font-semibold ${
-                    isActive ? "text-white" : "text-slate-300"
+                    isActive ? "text-slate-900" : "text-slate-600"
                   }`}
                 >
                   {tier}
@@ -75,7 +75,7 @@ function ModelSelector({ product }: { product: Product }) {
                 </div>
                 <p
                   className={`text-xs font-medium ${
-                    isActive ? "text-white" : "text-slate-400"
+                    isActive ? "text-slate-900" : "text-slate-500"
                   }`}
                 >
                   Desde {formatPrice(model.price)}
@@ -119,8 +119,8 @@ function ColorSelector({ product }: { product: Product }) {
               href={`/producto/${variant.id}`}
               className={`group relative flex flex-col items-center gap-2 rounded-xl p-2.5 transition-[border-color,background-color] border ${
                 isActive
-                  ? "border-white/25 bg-white/5"
-                  : "border-transparent hover:border-white/10 hover:bg-white/3"
+                  ? "border-slate-300 bg-slate-50"
+                  : "border-transparent hover:border-slate-200 hover:bg-slate-50"
               }`}
             >
               {/* Color swatch with metallic finish */}
@@ -200,8 +200,8 @@ function CapacitySelector({ product }: { product: Product }) {
               href={`/producto/${variant.id}`}
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-[border-color,background-color,color] border ${
                 isActive
-                  ? "bg-white/10 border-white/30 text-white"
-                  : "glass-panel border-white/5 text-slate-400 hover:border-white/15 hover:text-white"
+                  ? "bg-slate-100 border-slate-300 text-slate-900"
+                  : "glass-panel border-slate-200 text-slate-500 hover:border-slate-300 hover:text-slate-900"
               }`}
             >
               {variant.capacity}
@@ -214,7 +214,7 @@ function CapacitySelector({ product }: { product: Product }) {
 }
 
 const conditionStyles: Record<string, string> = {
-  Sellado: "bg-green-500/10 text-green-400 border-green-500/30",
+  Sellado: "bg-[#c462ab]/10 text-[#c462ab] border-[#c462ab]/30",
   "A+": "bg-blue-500/10 text-blue-400 border-blue-500/30",
   A: "bg-yellow-500/10 text-yellow-400 border-yellow-500/30",
 };
@@ -241,7 +241,7 @@ function ConditionSelector({ product }: { product: Product }) {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all border ${
                 isActive
                   ? conditionStyles[variant.condition]
-                  : "glass-panel border-white/5 text-slate-400 hover:border-white/15 hover:text-white"
+                  : "glass-panel border-slate-200 text-slate-500 hover:border-slate-300 hover:text-slate-900"
               }`}
             >
               {variant.condition} · {formatPrice(variant.price)}

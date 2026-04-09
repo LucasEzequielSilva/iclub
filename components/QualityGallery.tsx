@@ -131,14 +131,14 @@ export default function QualityGallery() {
     <section id="quality" className="py-16 md:py-20 overflow-hidden">
       {/* Hero: Video + Quality Points */}
       <div className="max-w-7xl mx-auto px-6 mb-12 md:mb-16">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-green-500/20 bg-green-500/10 text-sm font-medium text-green-400 mb-5">
-          <span className="flex size-2 rounded-full bg-green-400" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#c462ab]/20 bg-[#c462ab]/10 text-sm font-medium text-[#c462ab] mb-5">
+          <span className="flex size-2 rounded-full bg-[#c462ab]" />
           Calidad A+
         </div>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-white mb-3 text-balance">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-slate-900 mb-3 text-balance">
           Cada iPhone, verificado al 100%
         </h2>
-        <p className="text-slate-400 max-w-2xl text-lg text-pretty mb-8 md:mb-12">
+        <p className="text-slate-500 max-w-2xl text-lg text-pretty mb-8 md:mb-12">
           Revisamos cada detalle antes de publicar. Sin sorpresas, lo que ves es lo que recibís.
         </p>
 
@@ -172,12 +172,12 @@ export default function QualityGallery() {
                   key={point.title}
                   className="glass-panel rounded-xl p-5 sm:p-6 flex gap-4 items-start"
                 >
-                  <div className="shrink-0 size-10 sm:size-11 rounded-full bg-green-500/10 flex items-center justify-center">
-                    <Icon className="size-5 sm:size-6 text-green-400" />
+                  <div className="shrink-0 size-10 sm:size-11 rounded-full bg-[#c462ab]/10 flex items-center justify-center">
+                    <Icon className="size-5 sm:size-6 text-[#c462ab]" />
                   </div>
                   <div>
-                    <p className="text-white font-medium text-sm sm:text-base">{point.title}</p>
-                    <p className="text-slate-400 text-xs sm:text-sm mt-1 leading-relaxed">{point.desc}</p>
+                    <p className="text-slate-900 font-medium text-sm sm:text-base">{point.title}</p>
+                    <p className="text-slate-500 text-xs sm:text-sm mt-1 leading-relaxed">{point.desc}</p>
                   </div>
                 </div>
               );
@@ -186,7 +186,7 @@ export default function QualityGallery() {
               href="https://wa.me/5491127967222?text=Hola!%20Quiero%20ver%20fotos%20de%20un%20modelo"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer glass-panel rounded-xl p-5 sm:p-6 flex items-center justify-center gap-3 text-green-400 hover:bg-green-500/5 hover:border-green-500/20 transition-[background-color,border-color] duration-150 mt-auto"
+              className="cursor-pointer glass-panel rounded-xl p-5 sm:p-6 flex items-center justify-center gap-3 text-[#c462ab] hover:bg-[#c462ab]/5 hover:border-[#c462ab]/20 transition-[background-color,border-color] duration-150 mt-auto"
             >
               <FaWhatsapp className="size-5" />
               <span className="font-medium text-sm sm:text-base">Pedí fotos de tu modelo</span>
