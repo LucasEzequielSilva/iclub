@@ -14,9 +14,9 @@ export default function Navbar() {
           <Image
             src="/logo iclub.png"
             alt="iCLUB Store"
-            width={320}
-            height={96}
-            className="h-24 w-auto"
+            width={360}
+            height={112}
+            className="h-28 w-auto"
             priority
           />
         </a>
