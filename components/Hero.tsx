@@ -86,14 +86,14 @@ export default function Hero() {
 
           {/* Community CTA */}
           <a
-            href="https://chat.whatsapp.com/JxhpRTtwQVcHBLNQjPeTKh"
+            href="https://www.instagram.com/channel/AbawqKeXC1MVF29N/"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 min-h-[44px] hover:bg-slate-100 hover:border-slate-300 transition-[background-color,border-color] duration-150"
           >
             <HiOutlineUserGroup aria-hidden="true" className="size-4 text-slate-400 shrink-0" />
             <span className="text-sm font-medium text-slate-600">
-              Comunidad iCLUB Store
+              Comunidad iCLUB
             </span>
             <FiArrowRight aria-hidden="true" className="size-3.5 text-slate-400 group-hover:text-slate-600 shrink-0 transition-colors duration-150" />
           </a>

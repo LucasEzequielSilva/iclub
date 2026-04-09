@@ -4,16 +4,16 @@ import type { Product } from "@/data/products";
 const warrantyByCondition: Record<Product["condition"], string[]> = {
   Sellado: [
     "Garantía oficial Apple",
-    "30 días de garantía iCLUB Store adicional",
+    "30 días de garantía iCLUB adicional",
     "Soporte post-venta incluido",
   ],
   "A+": [
-    "30 días de garantía iCLUB Store",
+    "30 días de garantía iCLUB",
     "Cubre defectos de funcionamiento",
     "Soporte post-venta incluido",
   ],
   A: [
-    "30 días de garantía iCLUB Store",
+    "30 días de garantía iCLUB",
     "Cubre defectos de funcionamiento",
     "Soporte post-venta incluido",
   ],

@@ -615,12 +615,12 @@ export const conditionInfo: Record<
   "A+": {
     label: "Grado A+",
     description:
-      "Equipo en estado impecable, prácticamente nuevo. Sin marcas de uso visibles. Batería al 100% y funcionamiento verificado al 100%. Garantía iCLUB Store de 30 días incluida.",
+      "Equipo en estado impecable, prácticamente nuevo. Sin marcas de uso visibles. Batería al 100% y funcionamiento verificado al 100%. Garantía iCLUB de 30 días incluida.",
   },
   A: {
     label: "Grado A",
     description:
-      "Equipo en muy buen estado con mínimos signos de uso. Puede presentar micro marcas cosméticas imperceptibles en uso diario. Batería al 100% y funcionamiento verificado. Garantía iCLUB Store de 30 días incluida.",
+      "Equipo en muy buen estado con mínimos signos de uso. Puede presentar micro marcas cosméticas imperceptibles en uso diario. Batería al 100% y funcionamiento verificado. Garantía iCLUB de 30 días incluida.",
   },
 };
 
