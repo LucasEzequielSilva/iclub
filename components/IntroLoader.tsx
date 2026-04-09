@@ -84,7 +84,7 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
         >
           <div className="relative z-10 flex flex-col items-center">
             <div className="flex overflow-hidden">
-              {"iCLUB".split("").map((char, i) => (
+              {"iCLUB Store".split("").map((char, i) => (
                 <motion.span
                   key={i}
                   className="text-5xl md:text-7xl font-bold tracking-widest"
