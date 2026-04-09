@@ -122,9 +122,18 @@ export function buildWhatsAppMessage(
   interestedModel: string,
   tradeModel: string,
   storage: string,
-  price: number
+  price: number,
+  damages?: string[]
 ): string {
-  return `Hola, ¿cómo estás? Soy ${name}. Estaba interesado en el ${interestedModel}, quería consultar si hay stock. Quiero entregar mi ${tradeModel} de ${storage} cotizado a USD ${price}.`;
+  let msg = `Hola, ¿cómo estás? Soy ${name}. Estaba interesado en el ${interestedModel}, quería consultar si hay stock. Quiero entregar mi ${tradeModel} de ${storage} cotizado a ${price}USD.`;
+  if (damages && damages.length > 0) {
+    const damageLabels = damages.map((id) => {
+      const opt = damageOptions.find((d) => d.id === id);
+      return opt ? opt.label : id;
+    });
+    msg += ` Fallas: ${damageLabels.join(", ")}.`;
+  }
+  return msg;
 }
 
 export function getWhatsAppUrl(message: string): string {

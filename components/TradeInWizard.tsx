@@ -109,7 +109,8 @@ export default function TradeInWizard() {
         interestedDisplayName,
         selectedModelName,
         formatStorageLabel(selectedStorage!),
-        price!
+        price!,
+        selectedDamages
       )
     : "";
 
@@ -338,7 +339,7 @@ export default function TradeInWizard() {
                       className="text-6xl sm:text-7xl font-extrabold text-slate-900 tracking-tight"
                       style={{ fontFamily: "var(--font-space-grotesk)" }}
                     >
-                      USD {price}
+                      {price}USD
                     </p>
                     <div className="flex items-center justify-center gap-2 flex-wrap text-xs text-slate-400">
                       <span className="bg-slate-100 px-2.5 py-1 rounded-full">{selectedModelName}</span>

@@ -109,7 +109,8 @@ export default function TradeInCalculator() {
         interestedModel,
         selectedModelName,
         formatStorageLabel(selectedStorage!),
-        price!
+        price!,
+        selectedDamages
       )
     : "";
 
@@ -312,7 +313,7 @@ export default function TradeInCalculator() {
                 <div className="rounded-2xl border border-[#c462ab]/30 bg-[#c462ab]/5 p-8 text-center space-y-2">
                   <p className="text-sm text-slate-500">Valor estimado de tu equipo</p>
                   <p className="text-5xl font-extrabold text-slate-900 tracking-tight" style={{ fontFamily: "var(--font-space-grotesk)" }}>
-                    USD {price}
+                    {price}USD
                   </p>
                   <p className="text-xs text-slate-400 pt-1">
                     {selectedModelName} · {formatStorageLabel(selectedStorage!)} · Batería {batteryHealth?.replace("-", "–")}%
