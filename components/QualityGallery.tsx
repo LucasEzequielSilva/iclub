@@ -153,7 +153,7 @@ export default function QualityGallery() {
               preload="metadata"
               className="absolute inset-0 w-full h-full object-cover saturate-[1.15] contrast-[1.1] brightness-[0.95] hue-rotate-[-12deg]"
             >
-              <source src="/quality-showcase.mp4" type="video/mp4" />
+              <source src="/quality-showcase-iclub.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6">
