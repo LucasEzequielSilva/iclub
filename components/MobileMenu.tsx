@@ -44,7 +44,7 @@ export default function MobileMenu() {
             ))}
             <ResellerModal className="text-2xl font-medium text-slate-600 hover:text-slate-900 transition-colors py-2 min-h-[44px] flex items-center cursor-pointer" />
             <a
-              href="https://wa.me/5491127967222"
+              href="https://wa.me/1173747929"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}

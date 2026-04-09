@@ -74,7 +74,7 @@ export default function Hero() {
               <HiOutlineArrowDown aria-hidden="true" className="size-4 transition-transform duration-150 group-hover:translate-y-0.5" />
             </a>
             <a
-              href="https://wa.me/5491127967222"
+              href="https://wa.me/1173747929"
               target="_blank"
               rel="noopener noreferrer"
               className="group w-full sm:w-auto px-7 py-3.5 min-h-[44px] border border-slate-200 text-slate-700 rounded-full text-sm font-semibold uppercase tracking-wide hover:bg-slate-50 active:scale-95 transition-[transform,background-color] duration-150 flex items-center justify-center gap-2.5"

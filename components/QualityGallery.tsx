@@ -183,7 +183,7 @@ export default function QualityGallery() {
               );
             })}
             <a
-              href="https://wa.me/5491127967222?text=Hola!%20Quiero%20ver%20fotos%20de%20un%20modelo"
+              href="https://wa.me/1173747929?text=Hola!%20Quiero%20ver%20fotos%20de%20un%20modelo"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer glass-panel rounded-xl p-5 sm:p-6 flex items-center justify-center gap-3 text-[#c462ab] hover:bg-[#c462ab]/5 hover:border-[#c462ab]/20 transition-[background-color,border-color] duration-150 mt-auto"

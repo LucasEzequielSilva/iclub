@@ -1744,7 +1744,7 @@ export function formatPrice(price: number): string {
 
 export function getWhatsAppLink(product: Product): string {
   const message = `Hola! Me interesa el ${product.name} ${product.capacity} ${product.color} publicado a ${formatPrice(product.price)}. ¿Está disponible?`;
-  return `https://wa.me/5491127967222?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/1173747929?text=${encodeURIComponent(message)}`;
 }
 
 export function getProductById(id: string): Product | undefined {

@@ -10,7 +10,7 @@ export default function Footer() {
         </span>
         <div className="flex items-center gap-2 sm:gap-4 flex-wrap justify-center">
           <a
-            href="https://wa.me/5491127967222"
+            href="https://wa.me/1173747929"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-[#c462ab] transition-colors min-w-[44px] min-h-[44px] inline-flex items-center justify-center cursor-pointer"
@@ -19,7 +19,7 @@ export default function Footer() {
             <FaWhatsapp aria-hidden="true" className="size-5" />
           </a>
           <a
-            href="https://www.instagram.com/trendspot.ba/"
+            href="https://www.instagram.com/_iclubstore/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-[#c462ab] transition-colors min-w-[44px] min-h-[44px] inline-flex items-center justify-center cursor-pointer"

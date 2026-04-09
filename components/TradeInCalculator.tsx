@@ -326,7 +326,7 @@ export default function TradeInCalculator() {
                     Los daños superan el valor del equipo.
                   </p>
                   <a
-                    href="https://wa.me/5491127967222"
+                    href="https://wa.me/1173747929"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm text-[#c462ab] hover:text-[#b0559a] transition-colors"

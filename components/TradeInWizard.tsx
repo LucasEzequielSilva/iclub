@@ -360,7 +360,7 @@ export default function TradeInWizard() {
                   <div className="text-center space-y-4">
                     <p className="text-sm text-red-500">Los daños superan el valor del equipo.</p>
                     <a
-                      href="https://wa.me/5491127967222"
+                      href="https://wa.me/1173747929"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-[#c462ab] text-white px-6 py-3 rounded-2xl font-bold hover:bg-[#b0559a] transition-colors"

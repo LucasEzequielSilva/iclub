@@ -50,7 +50,7 @@ export default function Navbar() {
         </div>
 
         <a
-          href="https://wa.me/5491127967222"
+          href="https://wa.me/1173747929"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:flex items-center gap-2 bg-[#c462ab] text-white px-5 py-2.5 min-h-[44px] rounded-full text-sm font-medium hover:bg-[#b0559a] transition-colors"

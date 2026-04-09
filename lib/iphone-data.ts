@@ -137,5 +137,5 @@ export function buildWhatsAppMessage(
 }
 
 export function getWhatsAppUrl(message: string): string {
-  return `https://wa.me/5491127967222?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/1173747929?text=${encodeURIComponent(message)}`;
 }

@@ -6,7 +6,7 @@ import { HiOutlineXMark, HiOutlineBuildingStorefront } from "react-icons/hi2";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WHATSAPP_URL =
-  "https://wa.me/5491127967222?text=" +
+  "https://wa.me/1173747929?text=" +
   encodeURIComponent(
     "Hola, quiero información para revender equipos me mandarias lista mayorista?"
   );
