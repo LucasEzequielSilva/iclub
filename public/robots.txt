@@ -1,0 +1,9 @@
+# iCLUB Store
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://iclub-two.vercel.app/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

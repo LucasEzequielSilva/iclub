@@ -35,14 +35,26 @@ export async function generateMetadata({
   const product = getProductById(id);
   if (!product) return { title: "Producto no encontrado | iCLUB Store" };
 
+  const title = `${product.name} ${product.capacity} ${product.color}`;
+  const description = `${product.name} ${product.capacity} en color ${product.color}. Condición: ${product.condition}. ${formatPrice(product.price)}. Garantía iCLUB incluida.`;
+  const image = product.images?.[0] ? `https://iclub-two.vercel.app${product.images[0]}` : undefined;
+
   return {
-    title: `${product.name} ${product.capacity} ${product.color} | iCLUB Store`,
-    description: `${product.name} ${product.capacity} en color ${product.color}. Condición: ${product.condition}. ${formatPrice(product.price)}. Garantía incluida.`,
+    title,
+    description,
     openGraph: {
-      title: `${product.name} ${product.capacity} | iCLUB Store`,
+      title,
       description: `Comprá tu ${product.name} al mejor precio. ${product.condition}. ${formatPrice(product.price)}.`,
+      url: `https://iclub-two.vercel.app/producto/${product.id}`,
+      images: image ? [{ url: image, width: 800, height: 600, alt: title }] : undefined,
       locale: "es_AR",
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: `${product.name} ${product.condition} a ${formatPrice(product.price)}. Garantía iCLUB incluida.`,
+      images: image ? [image] : undefined,
     },
   };
 }
@@ -58,8 +70,38 @@ export default async function ProductPage({
 
   const specs = iphoneSpecsMap[product.modelKey] ?? null;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `${product.name} ${product.capacity} ${product.color}`,
+    description: `${product.name} ${product.capacity} en color ${product.color}. Condición: ${product.condition}. ${formatPrice(product.price)}. Garantía iCLUB de 30 días incluida.`,
+    image: product.images?.[0] ? `https://iclub-two.vercel.app${product.images[0]}` : undefined,
+    brand: {
+      "@type": "Brand",
+      name: "Apple",
+    },
+    offers: {
+      "@type": "Offer",
+      url: `https://iclub-two.vercel.app/producto/${product.id}`,
+      priceCurrency: "USD",
+      price: product.price,
+      availability: "https://schema.org/InStock",
+      itemCondition: product.condition === "Sellado"
+        ? "https://schema.org/NewCondition"
+        : "https://schema.org/UsedCondition",
+      seller: {
+        "@type": "Organization",
+        name: "iCLUB Store",
+      },
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="pb-20 lg:pb-0">
         <Breadcrumbs product={product} />
