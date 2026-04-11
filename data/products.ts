@@ -728,6 +728,30 @@ export const products: Product[] = [
     modelKey: "iPhone 17",
     images: ["/iphones/17/negro.jpg"],
   },
+  {
+    id: "111",
+    name: "iPhone 17",
+    capacity: "256GB",
+    condition: "Sellado",
+    color: "Blanco",
+    colorHex: "#F5F5F7",
+    price: 970,
+    featured: false,
+    modelKey: "iPhone 17",
+    images: ["/iphones/17/blanco.png"],
+  },
+  {
+    id: "112",
+    name: "iPhone 17",
+    capacity: "256GB",
+    condition: "Sellado",
+    color: "Verde Menta",
+    colorHex: "#98D4B5",
+    price: 970,
+    featured: false,
+    modelKey: "iPhone 17",
+    images: ["/iphones/17/verde.jpeg"],
+  },
 
   // ── iPhone 17 Pro ──
   {
@@ -1220,11 +1244,12 @@ export const products: Product[] = [
     name: "iPhone 14",
     capacity: "128GB",
     condition: "A+",
-    color: "Blanco Estelar",
-    colorHex: "#F9F3EE",
+    color: "Rojo",
+    colorHex: "#E30B2C",
     price: 365,
     featured: false,
     modelKey: "iPhone 14",
+    images: ["/iphones/14/ROJO.jpeg"],
   },
 
   // iPhone 13 Pro Max — +Dorado, +Azul Sierra
@@ -1533,6 +1558,18 @@ export const products: Product[] = [
     modelKey: "iPhone 14",
     images: ["/iphones/14/violeta.jpg"],
   },
+  {
+    id: "107",
+    name: "iPhone 14",
+    capacity: "128GB",
+    condition: "A+",
+    color: "Amarillo",
+    colorHex: "#F9E872",
+    price: 365,
+    featured: false,
+    modelKey: "iPhone 14",
+    images: ["/iphones/14/AMARILLO.jpeg"],
+  },
 
   // iPhone 14 Pro — +Plata
   {
@@ -1589,6 +1626,18 @@ export const products: Product[] = [
     modelKey: "iPhone 16",
     images: ["/iphones/16/rosa.jpg"],
   },
+  {
+    id: "109",
+    name: "iPhone 16",
+    capacity: "128GB",
+    condition: "A+",
+    color: "Blanco",
+    colorHex: "#F5F5F7",
+    price: 620,
+    featured: false,
+    modelKey: "iPhone 16",
+    images: ["/iphones/16/blanco.png"],
+  },
 
   // iPhone 17 Pro — +Titanio Negro
   {
@@ -1613,7 +1662,8 @@ export const products: Product[] = [
   { id: "92", name: "iPhone 14", capacity: "128GB", condition: "Sellado", color: "Azul", colorHex: "#4169E1", price: 585, featured: false, modelKey: "iPhone 14", images: ["/iphones/14/azul.jpg"] },
   { id: "93", name: "iPhone 14", capacity: "128GB", condition: "Sellado", color: "Medianoche", colorHex: "#2C2C2E", price: 585, featured: false, modelKey: "iPhone 14", images: ["/iphones/14/medianoche.jpg"] },
   { id: "94", name: "iPhone 14", capacity: "128GB", condition: "Sellado", color: "Violeta", colorHex: "#D1CDDA", price: 585, featured: false, modelKey: "iPhone 14", images: ["/iphones/14/violeta.jpg"] },
-  { id: "95", name: "iPhone 14", capacity: "128GB", condition: "Sellado", color: "Blanco Estelar", colorHex: "#F9F3EE", price: 585, featured: false, modelKey: "iPhone 14" },
+  { id: "95", name: "iPhone 14", capacity: "128GB", condition: "Sellado", color: "Rojo", colorHex: "#E30B2C", price: 585, featured: false, modelKey: "iPhone 14", images: ["/iphones/14/ROJO.jpeg"] },
+  { id: "108", name: "iPhone 14", capacity: "128GB", condition: "Sellado", color: "Amarillo", colorHex: "#F9E872", price: 585, featured: false, modelKey: "iPhone 14", images: ["/iphones/14/AMARILLO.jpeg"] },
   { id: "96", name: "iPhone 15", capacity: "128GB", condition: "Sellado", color: "Negro", colorHex: "#1C1C1E", price: 680, featured: false, modelKey: "iPhone 15", images: ["/iphones/15/negro.jpg"] },
   { id: "97", name: "iPhone 15", capacity: "128GB", condition: "Sellado", color: "Rosa", colorHex: "#F9C5D1", price: 680, featured: false, modelKey: "iPhone 15", images: ["/iphones/15/rosa.jpeg"] },
   { id: "98", name: "iPhone 15", capacity: "128GB", condition: "Sellado", color: "Azul", colorHex: "#4169E1", price: 680, featured: false, modelKey: "iPhone 15", images: ["/iphones/15/azul.jpeg"] },
@@ -1621,6 +1671,7 @@ export const products: Product[] = [
   { id: "100", name: "iPhone 16", capacity: "128GB", condition: "Sellado", color: "Azul Ultramar", colorHex: "#1D2E5C", price: 780, featured: false, modelKey: "iPhone 16", images: ["/iphones/16/iphone16-azulultramar.jpg"] },
   { id: "101", name: "iPhone 16", capacity: "128GB", condition: "Sellado", color: "Negro", colorHex: "#1C1C1E", price: 780, featured: false, modelKey: "iPhone 16", images: ["/iphones/16/iphone16-negro.jpg"] },
   { id: "102", name: "iPhone 16", capacity: "128GB", condition: "Sellado", color: "Rosa", colorHex: "#E8B4CB", price: 780, featured: false, modelKey: "iPhone 16", images: ["/iphones/16/rosa.jpg"] },
+  { id: "110", name: "iPhone 16", capacity: "128GB", condition: "Sellado", color: "Blanco", colorHex: "#F5F5F7", price: 780, featured: false, modelKey: "iPhone 16", images: ["/iphones/16/blanco.png"] },
 
   // ── iPhone 17 Pro A+ ──
   { id: "103", name: "iPhone 17 Pro", capacity: "256GB", condition: "A+", color: "Plata", colorHex: "#C0C0C0", price: 1190, featured: false, modelKey: "iPhone 17 Pro", images: ["/iphones/17-pro/silver.jpg"] },
