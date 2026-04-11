@@ -12,18 +12,24 @@ export default function HomeClient({
   const [loaderDone, setLoaderDone] = useState(false);
 
   useEffect(() => {
-    const hasVisited = localStorage.getItem("iclub_visited");
-    if (hasVisited) {
+    try {
+      const hasVisited = localStorage.getItem("iclub_visited");
+      if (hasVisited) {
+        setLoaderDone(true);
+      } else {
+        setShowLoader(true);
+      }
+    } catch {
       setLoaderDone(true);
-    } else {
-      setShowLoader(true);
     }
   }, []);
 
   const handleLoaderComplete = () => {
     setLoaderDone(true);
     setShowLoader(false);
-    localStorage.setItem("iclub_visited", "1");
+    try {
+      localStorage.setItem("iclub_visited", "1");
+    } catch {}
   };
 
   return (

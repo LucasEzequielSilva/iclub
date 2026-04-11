@@ -164,7 +164,7 @@ export default function TradeInWizard() {
   const hasBottomBar = step === 4 || step === 5;
 
   return (
-    <div className="min-h-dvh bg-white flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col">
       {/* Header */}
       <header className="sticky top-0 z-50 flex items-center justify-between px-5 py-4 border-b border-slate-200 bg-white/90 backdrop-blur-md">
         <a href="/" className="flex items-center gap-2">

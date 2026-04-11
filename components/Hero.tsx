@@ -14,7 +14,7 @@ export default function Hero() {
   const arsMinPrice = blueRate ? Math.round(MIN_PRICE * blueRate) : null;
 
   return (
-    <section className="relative lg:h-dvh pt-28 pb-12 lg:pb-0 px-4 sm:px-6 overflow-visible">
+    <section className="relative lg:h-screen pt-28 pb-12 lg:pb-0 px-4 sm:px-6 overflow-visible">
       {/* Ambient Glow */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
