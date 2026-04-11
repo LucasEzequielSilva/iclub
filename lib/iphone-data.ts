@@ -56,6 +56,8 @@ export const damageOptions: DamageOption[] = [
   { id: "buttons", label: "Botones no funcionan", discount: 30 },
   { id: "selfie", label: "Cámara selfie dañada", discount: 40 },
   { id: "lens", label: "Lente de cámara rayado", discount: 25 },
+  { id: "scratches", label: "Rayones visibles — no requiere reparación", discount: 20 },
+  { id: "antenna", label: "Señal / WiFi inestable (antena)", discount: 35 },
   { id: "unknown", label: "Pieza desconocida", discount: 50 },
 ];
 
