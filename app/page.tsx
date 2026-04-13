@@ -10,6 +10,7 @@ import Reviews from "@/components/Reviews";
 import TradeInBanner from "@/components/TradeInBanner";
 import Footer from "@/components/Footer";
 import HomeClient from "@/components/HomeClient";
+import PromoModal from "@/components/PromoModal";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -33,6 +34,7 @@ const jsonLd = {
 export default function Home() {
   return (
     <HomeClient>
+      <PromoModal />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

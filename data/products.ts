@@ -1784,8 +1784,7 @@ export const products: Product[] = [
     modelKey: "PlayStation 5 Slim Digital",
     images: ["/consolas/ps5-slim-digital.jpg"],
     category: "consolas",
-  },
-];
+  },];
 
 // ─── Funciones utilitarias ──────────────────────────────────
 
