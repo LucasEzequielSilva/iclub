@@ -32,6 +32,9 @@ export const iphoneModels: IPhoneModel[] = [
   { name: "iPhone 16 Plus", baseStorage: 128, storageOptions: [128, 256, 512], costPrice: 585, screenDamageDiscount: 100, faceIdDiscount: 105 },
   { name: "iPhone 16 Pro", baseStorage: 128, storageOptions: [128, 256, 512, 1024], costPrice: 700, screenDamageDiscount: 185, faceIdDiscount: 130 },
   { name: "iPhone 16 Pro Max", baseStorage: 256, storageOptions: [256, 512, 1024], costPrice: 850, screenDamageDiscount: 230, faceIdDiscount: 150 },
+  { name: "iPhone 17", baseStorage: 256, storageOptions: [256, 512], costPrice: 800, screenDamageDiscount: 195, faceIdDiscount: 120 },
+  { name: "iPhone 17 Pro", baseStorage: 256, storageOptions: [256, 512, 1024], costPrice: 1050, screenDamageDiscount: 180, faceIdDiscount: 160 },
+  { name: "iPhone 17 Pro Max", baseStorage: 256, storageOptions: [256, 512, 1024], costPrice: 1150, screenDamageDiscount: 200, faceIdDiscount: 170 },
 ];
 
 export interface DamageOption {
